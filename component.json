@@ -1,0 +1,6 @@
+{
+  "name": "serialize",
+  "version": "0.1.0",
+  "main": ["serialize.js", "serialize.min.js"],
+  "dependencies": { }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="qunit-1.10.0.css">
+</head>
+<body>
+  <div id="qunit"></div>
+
+
+  <h2>Test forms</h2>
+<form id="simple">
+	<input name="simple-input" type="text" value="foo">
+	<textarea name="simple-textarea">bar</textarea>
+	<select name="simple-select">
+		<option value="not-baz">not baz</option>
+		<option value="baz" selected>baz</option>
+	</select>
+	<select name="simple-multiselect" multiple>
+		<option value="multi-1">multi-1</option>
+		<option value="multi-2" selected>multi-2</option>
+		<option value="multi-3">multi-3</option>
+		<option value="multi-4" selected>multi-4</option>
+	</select>
+	<input name="simple-checkbox" type="checkbox" value="1" checked>
+	<input name="simple-radio" type="radio" value="1" checked>
+</form>
+
+<form id="checkbox">
+	<input name="checkbox-checked" type="checkbox" value="1" checked>
+
+	<input name="checkbox-unchecked" type="checkbox" value="2">
+
+	<input name="checkbox-multi" type="checkbox" value="3" checked>
+	<input name="checkbox-multi" type="checkbox" value="4" checked>
+	<input name="checkbox-multi" type="checkbox" value="5">
+</form>
+
+<form id="radio">
+	<input name="radio-radio" type="radio" value="1">
+	<input name="radio-radio" type="radio" value="2">
+	<input name="radio-radio" type="radio" value="3" checked>
+	<input name="radio-radio" type="radio" value="4">
+</form>
+
+<form id="not-serialized">
+	<input name="not-serialized-file" type="file">
+	<input name="not-serialized-button" type="button" value="A button">
+	<input name="not-serialized-img" type="image" src="http://placekitten.com/40/20">
+	<input name="not-serialized-submit" type="submit" value="A submit">
+</form>
+
+<form id="disabled">
+	<input name="disabled-input" type="text" value="disabled" disabled>
+	<textarea name="disabled-textarea" disabled>textarea</textarea>
+	<select name="disabled-select-1" disabled>
+		<option value="foo" selected>Foo</option>
+	</select>
+	<select name="disabled-select-2">
+		<option value="foo" disabled selected>Foo</option>
+	</select>
+</form>
+
+<div id="not-a-form">
+	<input name="not-a-form-input" type="text" value="foo">
+</div>
+
+  <script src="../serialize.js"></script>
+  <script src="qunit-1.10.0.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>
